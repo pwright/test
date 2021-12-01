@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://themr0c.github.io/antora-for-modular-docs/docs/end-user-guide/assemblies/introduction/</loc>
+<lastmod>2021-12-01T18:36:15.280Z</lastmod>
+</url>
+<url>
 <loc>https://themr0c.github.io/antora-for-modular-docs/docs/end-user-guide/introduction/</loc>
-<lastmod>2021-12-01T18:27:09.347Z</lastmod>
+<lastmod>2021-12-01T18:36:15.280Z</lastmod>
+</url>
+<url>
+<loc>https://themr0c.github.io/antora-for-modular-docs/docs/end-user-guide/modules/proc_starting-a-new-antora-project/</loc>
+<lastmod>2021-12-01T18:36:15.280Z</lastmod>
 </url>
 </urlset>

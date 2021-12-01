@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Starting a new Antora project compatible with Modular Documentation :: Antora for Modular Documentation</title>
+    <link rel="canonical" href="https://themr0c.github.io/antora-for-modular-docs/docs/end-user-guide/modules/proc_starting-a-new-antora-project/">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="../../../../_/css/extra.css">
+<link rel="stylesheet" href="../../../../_/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <button class="navbar-burger" data-target="topbar-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <img src="../../../../_/img/project-logo.svg" class="navbar-logo" alt="Project logo">
+        <a href="https://themr0c.github.io/antora-for-modular-docs/index.html">Antora for Modular Documentation</a>
+      </div>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item hide-for-print">
+          <script async src="https://cse.google.com/cse.js?cx=002898025167115630151:gnr5edrg2eo"></script>
+          <div class="gcse-searchbox" enableAutoComplete="true"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="gcse-searchresults"></div>
+</header><div class="body">
+<div class="nav-container" data-component="docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../introduction/">Antora for Modular Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../introduction/">Introduction</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Antora for Modular Documentation</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../introduction/">Antora for Modular Documentation</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../introduction/">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../introduction/" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../introduction/">Antora for Modular Documentation</a></li>
+    <li><a href="./">Starting a new Antora project compatible with Modular Documentation</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/themr0c/antora-for-modular-docs/edit/main/modules/end-user-guide/pages/modules/proc_starting-a-new-antora-project.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Starting a new Antora project compatible with Modular Documentation</h1>
+<div class="paragraph _abstract">
+<p>Starting a new Antora project compatible with Modular Documentation.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p>Docker or Podman.</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Create a repository using <a href="https://github.com/themr0c/antora-for-modular-docs/generate">the Antora for Modular Docs repository template</a> and clone the repository to your local environment.</p>
+</li>
+<li>
+<p>Alternatively, download the <a href="https://github.com/themr0c/antora-for-modular-docs/archive/refs/heads/main.zip">Antora for Modular Docs zip archive</a>, decompress it, and use the content of this archive to start a new repository.</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ cd antora-for-modular-docs
+$ git init</pre>
+</div>
+</div>
+</li>
+<li>
+<p>The new repository contains:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The current documentation.</p>
+</li>
+<li>
+<p>Antora configuration, to adapt to your needs.</p>
+</li>
+<li>
+<p>A GitHub workflow to publish the docs using GitHub Pages.</p>
+</li>
+<li>
+<p>A GitHub workflow to build, validate and publish a preview for pull requests.</p>
+</li>
+<li>
+<p>Configuration to edit and build the documentation on <a href="https://workspaces.openshift.com">Eclipse Che hosted by Red Hat</a></p>
+</li>
+<li>
+<p>Configuration for the <a href="https://github.com/wjdp/htmltest"><code>htmltest</code></a> link checker and other tools.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Current example defines an unique module: <code>end-user-guide</code>. Adapt the setup to your needs:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Optionally, rename the <code>end-user-guide</code> directory.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Don&#8217;t use the default <code>ROOT</code> module name, always use a <a href="https://docs.antora.org/antora/2.3/named-module-directory/">Named Module Directory</a>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Optionally, add a new module directory, and create the requested subdirectories. See <a href="https://docs.antora.org/antora/2.3/standard-directories/">Antora - Standard File and Directory Set</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Edit <code>antora.yml</code>. See <a href="https://docs.antora.org/antora/2.3/component-version-descriptor/">What’s antora.yml?</a></p>
+<div class="listingblock">
+<div class="title"><code>antora.yml</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+# Antora component version descriptor.
+name: <em>&lt;docs&gt;</em> <i class="conum" data-value="1"></i><b>(1)</b>
+title: <em>&lt;Component Title&gt;</em> <i class="conum" data-value="2"></i><b>(2)</b>
+version: <em>&lt;master&gt;</em> <i class="conum" data-value="3"></i><b>(3)</b>
+display_version: <em>&lt;Stable version&gt;</em> <i class="conum" data-value="4"></i><b>(4)</b>
+start_page: <em>&lt;end-user-guide:introduction.adoc&gt;</em> <i class="conum" data-value="5"></i><b>(5)</b>
+nav:
+  - <em>&lt;modules/end-user-guide/nav.adoc&gt;</em> <i class="conum" data-value="6"></i><b>(6)</b>
+asciidoc:
+  attributes:
+    # for antora
+    experimental: ""
+    favicon: favicon.png
+    icons: font
+    # for the project
+    context: <em>&lt;docs&gt;</em> <i class="conum" data-value="7"></i><b>(7)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Mandatory component <code>name</code> with no spaces: results in an URL fragment. See <a href="https://docs.antora.org/antora/2.3/component-name-and-version/#name-key">Antora - name key</a>. Example: <code>docs</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Optional component title. See <a href="https://docs.antora.org/antora/2.3/component-title/">Antora - Customize the Title</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Mandatory version name. See <a href="https://docs.antora.org/antora/2.3/component-name-and-version/#version-key">Antora - version key</a>. Set to <code>master</code> to remove the version from the page URL, see <a href="https://docs.antora.org/antora/2.3/component-with-no-version/">Antora - Define a Component Version with No Version</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Optional version display name. Example: <code>Stable</code>. See <a href="https://docs.antora.org/antora/2.3/component-display-version/">Antora - Customize the Display Version</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Define the start page. See: <a href="https://docs.antora.org/antora/2.3/component-start-page/">Antora - Choose a Start Page</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Define navigation file. See: <a href="https://docs.antora.org/antora/2.3/component-navigation/">Antora - Assign Navigation Files to a Component Version</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td>Define project <code>context</code>. (no spaces: results in an URL fragment) See: <a href="https://redhat-documentation.github.io/modular-docs/#module_anchor-and-file-names-concept">Modular Docs - File Names and Anchors</a></td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Edit <code>antora-playbook-for-development.yml</code>. See <a href="https://docs.antora.org/antora/2.3/playbook/">What’s an Antora playbook?</a></p>
+<div class="listingblock">
+<div class="title"><code>antora-playbook-for-development.yml</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+# Antora Playbook for development.
+# Use it to build uncommitted changes.
+#
+site:
+  title: <em>&lt;Component Name Documentation&gt;</em> <i class="conum" data-value="1"></i><b>(1)</b>
+  # url: Disabled on purpose to avoid htmltest crawling the live website.
+  start_page: <em>&lt;docs&gt;</em>::index.adoc <i class="conum" data-value="2"></i><b>(2)</b>
+  robots: allow
+content:
+  sources:
+    - url: ./
+      branches: HEAD
+output:
+  destinations:
+    - provider: fs
+      clean: true
+      path: build/site
+ui:
+  bundle:
+    url: <a href="https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable" class="bare">https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable</a>
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+urls:
+  html_extension_style: indexify
+  redirect_facility: static
+runtime:
+  cache_dir: ./.cache/antora</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Define project <code>title</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Define project <code>start_page</code>.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Edit <code>antora-playbook.yml</code></p>
+<div class="listingblock">
+<div class="title"><code>antora-playbook.yml</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+# Use this Antora Playbook for publication, to build the released version branch.
+site:
+  title: <em>&lt;Component Name Documentation&gt;</em> <i class="conum" data-value="1"></i><b>(1)</b>
+  # The url property is mandatory to generate the 404 and sitemap files.
+  url: <em><a href="https://project.tld" class="bare">https://project.tld</a></em> <i class="conum" data-value="2"></i><b>(2)</b>
+  start_page: <em>&lt;docs&gt;</em>::index.adoc <i class="conum" data-value="3"></i><b>(3)</b>
+  keys:
+    google_analytics: "<em>&lt;google_analytics_key&gt;</em>" <i class="conum" data-value="4"></i><b>(4)</b>
+  robots: allow
+content:
+  sources:
+    - url: ./
+      branches:
+        - stable <i class="conum" data-value="5"></i><b>(5)</b>
+        - main <i class="conum" data-value="5"></i><b>(5)</b>
+      edit_url: "<em>&lt;git_repository_URL&gt;</em>/edit/main/{path}" <i class="conum" data-value="6"></i><b>(6)</b>
+output:
+  destinations:
+    - provider: fs
+      clean: true
+      path: build/site
+ui:
+  bundle:
+    url: <a href="https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable" class="bare">https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable</a>
+    snapshot: true
+  supplemental_files: ./supplemental-ui
+urls:
+  html_extension_style: indexify
+  redirect_facility: static
+runtime:
+  cache_dir: ./.cache/antora</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Define project <code>title</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Define peoject <code>url</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Define project <code>start_page</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Define <code>google_analytics</code> key.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Define branches to build.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Define <code>edit_url</code>.</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Replace <code>supplemental-ui/img/project-icon.svg</code> by the project logo.</p>
+</li>
+<li>
+<p>Optionally, edit <code>supplemental-ui/partials/header-content.hbs</code>.</p>
+</li>
+<li>
+<p>Create an initial commit containing the result and publish to the remote Git repository.</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ git add .
+$ git commit
+$ git push</pre>
+</div>
+</div>
+</li>
+<li>
+<p>To publish the docs using GitHub pages, enable GitHub Pages in the remote repository configuration: choose <code>gh-pages</code> as source branch, and <code>root</code> as source directory.</p>
+</li>
+<li>
+<p>To publish the build result for the pull requests:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a Netlify token <code>NETLIFY_AUTH_TOKEN</code>. See: <a href="https://app.netlify.com/user/applications/personal">Netlify - Create a new personal access token</a>. See: link: <a href="https://www.netlify.com/docs/cli/#obtain-a-token-in-the-netlify-ui">Obtaining a token with the UI</a>.</p>
+</li>
+<li>
+<p>Get a Netlify site ID <code>NETLIFY_SITE_ID</code>. See: <a href="https://docs.netlify.com/cli/get-started/#link-with-an-environment-variable">Link with an environment variable</a>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Set the <code>NETLIFY_AUTH_TOKEN</code> and <code>NETLIFY_SITE_ID</code> environment variables in the remote git repository configuration (settings/secrets/actions). See: <a href="https://github.com/netlify/actions/tree/master/cli">Netlify GitHub Action CLI documentation</a></p>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<div class="title">Verification</div>
+<ol class="arabic">
+<li>
+<p>Run preview on a local environment</p>
+<div class="listingblock">
+<div class="content">
+<pre>./runnerpreview.sh</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Navigate to the remote git repository and watch for the changes in the Actions and Pages.</p>
+</li>
+</ol>
+</div>
+<div class="ulist _additional-resources">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p><a href="https://docs.antora.org/antora/2.3/">Antora documentation</a></p>
+</li>
+<li>
+<p><a href="https://docs.antora.org/antora/2.3/component-name-and-version/">Define a Component Name and Version</a></p>
+</li>
+<li>
+<p>For more details on writing procedure modules, see the <a href="https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide">Modular Documentation Reference Guide</a>.</p>
+</li>
+<li>
+<p>Use a consistent system for file names, IDs, and titles. For tips, see <em>Anchor Names and File Names</em> in <a href="https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide">Modular Documentation Reference Guide</a>.</p>
+</li>
+</ul>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
