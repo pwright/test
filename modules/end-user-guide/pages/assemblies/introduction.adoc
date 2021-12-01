@@ -16,6 +16,7 @@
 // == Prerequisites
 
 include::../modules/proc_starting-a-new-antora-project.adoc[leveloffset=+1]
+include::../modules/test.adoc[leveloffset=+1]
 
 // [role="_additional-resources"]
 // == Additional resources (or Next steps)

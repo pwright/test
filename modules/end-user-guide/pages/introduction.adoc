@@ -1,1 +1,5 @@
 = Introduction
+
+xref:assemblies/introduction.adoc[]
+
+xref:modules/test.adoc[]
